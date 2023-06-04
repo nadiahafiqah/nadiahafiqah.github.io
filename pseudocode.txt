@@ -1,0 +1,21 @@
+ APP PLAN
+ 
+ get input:
+  age:
+  height:
+  weight: 
+  activity level:
+
+generate BMR
+generate TDEE
+
+get input: GOAL (lose weight/maintain weight)
+to lose -> reduce by avg of 500cals/week? **** to research ****
+assuming a healthy weight loss of 0.5kg/week
+
+generate macros
+
+get input: food craving for the day
+
+output: remaining macros for the day
+recommend food items that can fit the remaining macros
