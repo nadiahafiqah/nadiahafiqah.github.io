@@ -6,8 +6,145 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="main.js" charset="utf-8" defer></script>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
     <title>Every day is cheat day!</title>
   </head>
 
-  <body></body>
+  <body>
+      <nav>
+        <ul class="nav nav-tabs justify-content-center">
+          <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="" class="nav-link">Calculator</a></li>
+          <li class="nav-item">
+            <a href="" class="nav-link">Citations</a>
+          </li>
+        </ul>
+      </nav><header>
+      <div class="container">
+        <h1>Every day is cheat day!</h1>
+        <h6>Fill up your details below and let's get started on your cheat days journey.</h6>
+    </div></div>
+  </header>
+      <main>
+        <div class="container">
+        <form>
+          <div class="form-group row">
+              <label for="nameInput" class="col-sm-2 col-form-label">Name</label>
+              <div class="col-sm-10">
+              <input type="text" class="form-control" id="nameInput" />
+            </div></div>
+            <div class="form-group row">
+              <label for="ageInput" class="col-sm-2 col-form-label">Age</label>
+              <div class="col-sm-10">
+              <input type="text" class="form-control" id="ageInput" />
+            </div></div>
+
+            <fieldset class ="form-group">
+            <div class="row">
+              <legend class="col-form-label col-sm-2 pt-0">Sex</legend>
+      <div class="col-sm-10">
+        <div class="form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                id="sexRadio1"
+                name="inlineRadio"
+                value="sexOption1"
+              />
+              
+              <label class="form-check-label" for="sexRadio1">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                id="sexRadio2"
+                name="inlineRadio"
+                value="sexOption2"
+              />
+              <label class="form-check-label" for="sexRadio2">Female</label>
+            </div>
+          </fieldset>
+            <div class="form-group row">
+              <label for="heightInput" class="col-sm-2 col-form-label">Height</label>
+              <div class="col-sm-10">
+              <input type="text" class="form-control" id="heightInput" placeholder="m" />
+            </div></div>
+            <div class="form-group row">
+              <label for="weightInput" class="col-sm-2 col-form-label">Weight</label>
+              <div class="col-sm-10">
+              <input type="text" class="form-control" id="weightInput" placeholder="kg" />
+            </div></div>
+
+
+            <fieldset class ="form-group">
+              <div class="row">
+  
+            <legend class="col-form-label col-sm-2 pt-0">Activity level</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      id="activityRadio1"
+                      name="inlineRadio2"
+                      value="activityOption1"
+                    />
+                    <label class="form-check-label" for="activityRadio1">Light activity: light exercise/sports 1-3 days/week
+
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      id="activityRadio2"
+                      name="inlineRadio2"
+                      value="activityOption2"
+                    />
+                    <label class="form-check-label" for="activityRadio2">Moderately active: moderate exercise/sports 3-5 days/week</label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      id="activityRadio3"
+                      name="inlineRadio2"
+                      value="activityOption3"
+                    />
+                    <label class="form-check-label" for="activityRadio3">Very active: hard exercise/sports 6-7 days/week</label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      id="activityRadio4"
+                      name="inlineRadio2"
+                      value="activityOption4"
+                    />
+                    <label class="form-check-label" for="activityRadio4">Extra active: very hard daily exercise/sports & physical job or 2X day training</label>
+                  </div></div>
+                </fieldset>
+          </div>
+        </form>
+      </div>
+      </main>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+  <div class="container">
+  <footer>
+    Disclaimer: I am not a dietician, I'm simply a CPT who enjoys food. I'm here
+    to help you attain your goal while still enjoying your meals.
+  </footer>
+</div>
 </html>
