@@ -1,5 +1,11 @@
 .container {
-  padding: 10px;
+  /* padding: 10px; */
+  background-color: navajowhite;
+  margin: 50px 0 0 0;
+  border-radius: 2em;
+}
+header {
+  padding-bottom: 10px;
 }
 h1 {
   text-align: center;

@@ -47,5 +47,6 @@ formSubmit.addEventListener("submit", (event) => {
   // alert once form is submitted successfully
   else {
     alert("Let's gooooooo!");
+    document.querySelector("body").style.visibility = "hidden";
   }
 });

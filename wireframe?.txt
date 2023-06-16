@@ -39,3 +39,18 @@ recommend food items that can fit the remaining macros
 additional stuff to add:
 
 educational info
+
+source:
+https://nutrium.com/blog/mifflin-st-jeor-for-nutrition-professionals/#:~:text=Of%20the%20four%20predictive%20equations,to%20be%20the%20most%20reliable.
+https://pubmed.ncbi.nlm.nih.gov/15883556/
+https://www.trifectanutrition.com/blog/how-to-count-macros-and-why-you-should-do-it#step-1
+
+
+DOMmanipulation:
+hide main container div (style)
+create new div for results container (HTML/DOM) --> can choose to show after
+
+food:
+array for list of food/input value
+store value
+calculate

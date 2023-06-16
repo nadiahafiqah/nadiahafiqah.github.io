@@ -46,7 +46,7 @@ const tdee = () => {
 // Calculating macros
 // Convert weight from kg to lbs:
 const convertWeight = () => {
-  let lbs = Math.round(weight.value * 2.2046);
+  let lbs = Math.round(weight.value * 2.20462);
   return lbs;
 };
 console.log(convertWeight());
