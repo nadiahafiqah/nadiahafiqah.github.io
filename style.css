@@ -16,3 +16,20 @@ h6 {
 .form-group {
   margin: 14px 0 14px 0;
 }
+.result .bmrcalories {
+  font-size: 40px;
+  color: red;
+  font-weight: bold;
+  vertical-align: middle;
+  margin: 10px;
+}
+.result .tdeecalories {
+  font-size: 40px;
+  color: red;
+  font-weight: bold;
+  vertical-align: middle;
+  margin: 10px;
+}
+.result .assumption {
+  text-transform: lowercase;
+}

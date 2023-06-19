@@ -1,11 +1,11 @@
 // generate BMR:  Mifflin-St. Jeor equation
 
-const bmrM = () => {
+const bmrM = (weight, height, age) => {
   getValues();
   return 10 * weight.value + 6.25 * height.value - 5 * age.value + 5;
 };
 
-const bmrF = () => {
+const bmrF = (weight, height, age) => {
   getValues();
   return 10 * weight.value + 6.25 * height.value - 5 * age.value - 161;
 };
