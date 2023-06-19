@@ -1,4 +1,4 @@
-const formSubmit = document.querySelector("btn");
+const formSubmit = document.querySelector("button");
 const username = document.getElementById("nameInput");
 const age = document.getElementById("ageInput");
 const height = document.getElementById("heightInput");
@@ -80,8 +80,8 @@ formSubmit.addEventListener("click", () => {
   // alert if form has blanks
 });
 
-new fullpage("#fullpage", {
-  //options here
-  autoScrolling: true,
-  scrollHorizontally: true,
-});
+// new fullpage("#fullpage", {
+//   //options here
+//   autoScrolling: true,
+//   scrollHorizontally: true,
+// });
