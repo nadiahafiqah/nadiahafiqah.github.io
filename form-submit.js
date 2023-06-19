@@ -15,6 +15,7 @@ const activity = () => {
 };
 
 const getValues = () => {
+  // is this what's causing the error? since the function doesn't have a return value?
   const nameInput = username.value;
   const ageInput = age.value;
   const sexInput = sex();
