@@ -1,35 +1,47 @@
-const formSubmit = document.querySelector("form");
+const formSubmit = document.querySelector("btn");
 const username = document.getElementById("nameInput");
 const age = document.getElementById("ageInput");
-const sex = document.getElementsByName("inlineRadio"); // need to get the value from this
 const height = document.getElementById("heightInput");
 const weight = document.getElementById("weightInput");
-const activity = document.getElementsByName("inlineRadio2"); // need to get the value from this
+const sex = () => {
+  let options = document.getElementsByName("inlineRadio");
+  let selected = Array.from(options).find((radio) => radio.checked);
+  return selected.value;
+};
+const activity = () => {
+  let options = document.getElementsByName("inlineRadio2");
+  let selected = Array.from(options).find((radio) => radio.checked);
+  return selected.value;
+};
 
-formSubmit.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  // getting value of inputs on form
+const getValues = () => {
   const nameInput = username.value;
   const ageInput = age.value;
-  const sexInput = sex.value;
+  const sexInput = sex();
   const heightInput = height.value;
   const weightInput = weight.value;
-  const activityInput = activity.value;
+  const activityInput = activity();
+  console.log("Name: " + nameInput);
+  console.log("Age: " + ageInput);
+  console.log("Sex: " + sexInput);
+  console.log("Height: " + heightInput);
+  console.log("Weight: " + weightInput);
+  console.log("Activity: " + activityInput);
+};
 
-  // converting age, height, weight from strings to int
+const convertInt = () => {
+  getValues();
   const ageInt = parseInt(ageInput);
   const heightInt = parseInt(heightInput);
   const weightInt = parseInt(weightInput);
-  console.log(ageInt);
-  console.log(heightInt);
-  console.log(weightInt);
+};
 
-  // alert if form has blanks
+const alertError = () => {
+  getValues();
   if (
     nameInput === "" ||
     ageInput === "" ||
-    sexInput === "" ||
+    sexInput === "" || // not defined???
     heightInput === "" ||
     weightInput === "" ||
     activityInput === ""
@@ -47,6 +59,29 @@ formSubmit.addEventListener("submit", (event) => {
   // alert once form is submitted successfully
   else {
     alert("Let's gooooooo!");
-    document.querySelector("body").style.visibility = "hidden";
   }
+};
+
+formSubmit.addEventListener("click", () => {
+  // event.preventDefault();
+  getValues();
+  convertInt();
+  alertError();
+
+  let resultBMR = document.createElement("result1");
+  console.log("BMR: " + bmr());
+  resultBMR.innerHTML = bmr();
+  document.getElementById("BMRresult").appendChild(resultBMR);
+
+  // getting value of inputs on form
+
+  // converting age, height, weight from strings to int
+
+  // alert if form has blanks
+});
+
+new fullpage("#fullpage", {
+  //options here
+  autoScrolling: true,
+  scrollHorizontally: true,
 });

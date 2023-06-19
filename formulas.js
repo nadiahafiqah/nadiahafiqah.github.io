@@ -1,19 +1,22 @@
 // generate BMR:  Mifflin-St. Jeor equation
 
-const bmrMen = () => {
-  10 * weight.value + 6.25 * height.value - 5 * age.value + 5;
+const bmrM = () => {
+  getValues();
+  return 10 * weight.value + 6.25 * height.value - 5 * age.value + 5;
 };
 
-const bmrWomen = () => {
-  10 * weight.value + 6.25 * height.value - 5 * age.value - 161;
+const bmrF = () => {
+  getValues();
+  return 10 * weight.value + 6.25 * height.value - 5 * age.value - 161;
 };
 
 const bmr = () => {
   let bmrResult = 0;
-  if (sex.value === "male") {
-    bmrResult = bmrMen();
+  if (sex() === "male") {
+    bmrResult = bmrM();
   } else {
-    bmrResult = bmrWomen();
+    // if sex() === "female"
+    bmrResult = bmrF();
   }
   return bmrResult;
 };
@@ -49,12 +52,10 @@ const convertWeight = () => {
   let lbs = Math.round(weight.value * 2.20462);
   return lbs;
 };
-console.log(convertWeight());
 
 // Calculating mass of protein and fat, and remaining cals for cabrs
 let protein = Math.round(convertWeight() * 0.8);
 let fat = Math.round(convertWeight() * 0.4);
-let carbsCals = Math.round(tdee() - proteinCals() - fatCals());
 
 const proteinCals = () => {
   let proteinCals = Math.round(protein * 4);
@@ -64,10 +65,14 @@ const fatCals = () => {
   let fatCals = Math.round(fat * 9);
   return fatCals;
 };
+
+const carbsCals = Math.round(tdee() - proteinCals() - fatCals());
+
 const carbs = () => {
   let intake = Math.round(carbsCals / 4);
   return intake;
 };
+
 // 1g protein = 4 cals (0.8g/lb of body weight)
 // 1g fat = 9 cals (0.4g/lb of body weight)
 // 1g carbs = 4 cals (remainder cals)
