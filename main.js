@@ -65,10 +65,10 @@ formSubmit.addEventListener("click", () => {
   if (
     nameInput === "" ||
     ageInput === "" ||
-    sexInput === "" ||
+    sexInput.size() === 0 ||
     heightInput === "" ||
     weightInput === "" ||
-    activityInput === ""
+    activityInput.size() === 0
   ) {
     alert("Please check and ensure all the necessary details are filled.");
   }
@@ -105,8 +105,8 @@ formSubmit.addEventListener("click", () => {
     const carbsCalsLoss = Math.round(TDEE - 500 - proteinCals - fatCals);
     const carbsIntakeLoss = Math.round(carbsCalsLoss / 4);
 
-    document.querySelector(".result").hidden = false;
-    document.querySelector(".dropdown").hidden = false;
+    // document.querySelector(".result").hidden = false;
+    // document.querySelector(".dropdown").hidden = false;
     formSubmit.hidden = true;
     nameMessage.innerHTML = nameInput;
     BMRcalories.innerHTML = BMR.toLocaleString("en-US") + " Calories";
@@ -119,3 +119,9 @@ formSubmit.addEventListener("click", () => {
     fatsLoss.innerHTML = fat.toLocaleString("en-US") + " grams";
   }
 });
+
+const cravingSelect = document.querySelector(".dropdown-item");
+console.log(cravingSelect);
+
+// make array of objects with food and macro content
+// on change, get value of change
