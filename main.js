@@ -65,10 +65,10 @@ formSubmit.addEventListener("click", () => {
   if (
     nameInput === "" ||
     ageInput === "" ||
-    sexInput.size() === 0 ||
+    sexInput === "" ||
     heightInput === "" ||
     weightInput === "" ||
-    activityInput.size() === 0
+    activityInput === ""
   ) {
     alert("Please check and ensure all the necessary details are filled.");
   }
@@ -124,4 +124,7 @@ const cravingSelect = document.querySelector(".dropdown-item");
 console.log(cravingSelect);
 
 // make array of objects with food and macro content
+// make options from array object index using foreach?
 // on change, get value of change
+// print data in object
+// give remainder for the day
