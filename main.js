@@ -5,10 +5,16 @@ const height = document.getElementById("heightInput");
 const weight = document.getElementById("weightInput");
 const BMRcalories = document.querySelector(".result .bmrcalories");
 const TDEEcalories = document.querySelector(".result .tdeecalories");
-const proteinIntake = document.querySelector(".result .protein");
-const carbsIntake = document.querySelector(".result .carbs");
-const fatsIntake = document.querySelector(".result .fats");
-document.querySelector(".result").hidden = true;
+const proteinIntake = document.querySelector(".result .mainprotein");
+const carbsIntake = document.querySelector(".result .maincarbs");
+const fatsIntake = document.querySelector(".result .mainfats");
+const proteinLoss = document.querySelector(".result .proteinloss");
+const carbsLoss = document.querySelector(".result .carbsloss");
+const fatsLoss = document.querySelector(".result .fatsloss");
+
+const nameMessage = document.querySelector(".result .nameInput");
+// document.querySelector(".result").hidden = true;
+// document.querySelector(".dropdown").hidden = true;
 
 // BMR formula
 const bmr = (weight, height, age, sex) => {
@@ -95,12 +101,21 @@ formSubmit.addEventListener("click", () => {
     const carbsCals = Math.round(TDEE - proteinCals - fatCals);
     const carbs = Math.round(carbsCals / 4);
 
+    // Calculating carbs for weight loss (-500 cals/day)
+    const carbsCalsLoss = Math.round(TDEE - 500 - proteinCals - fatCals);
+    const carbsIntakeLoss = Math.round(carbsCalsLoss / 4);
+
     document.querySelector(".result").hidden = false;
+    document.querySelector(".dropdown").hidden = false;
     formSubmit.hidden = true;
+    nameMessage.innerHTML = nameInput;
     BMRcalories.innerHTML = BMR.toLocaleString("en-US") + " Calories";
     TDEEcalories.innerHTML = TDEE.toLocaleString("en-US") + " Calories";
     proteinIntake.innerHTML = protein.toLocaleString("en-US") + " grams";
     carbsIntake.innerHTML = carbs.toLocaleString("en-US") + " grams";
     fatsIntake.innerHTML = fat.toLocaleString("en-US") + " grams";
+    proteinLoss.innerHTML = protein.toLocaleString("en-US") + " grams";
+    carbsLoss.innerHTML = carbsIntakeLoss.toLocaleString("en-US") + " grams";
+    fatsLoss.innerHTML = fat.toLocaleString("en-US") + " grams";
   }
 });
