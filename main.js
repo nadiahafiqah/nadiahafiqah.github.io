@@ -11,9 +11,9 @@ const fatsIntake = document.querySelector(".result .mainfats");
 const proteinLoss = document.querySelector(".result .proteinloss");
 const carbsLoss = document.querySelector(".result .carbsloss");
 const fatsLoss = document.querySelector(".result .fatsloss");
-
 const nameMessage = document.querySelector(".result .nameInput");
-document.querySelector(".result").hidden = true;
+let result = document.querySelector(".result");
+result.hidden = true;
 document.querySelector(".dropdown").hidden = true;
 
 // BMR formula
@@ -105,7 +105,7 @@ formSubmit.addEventListener("click", () => {
     const carbsCalsLoss = Math.round(TDEE - 500 - proteinCals - fatCals);
     const carbsIntakeLoss = Math.round(carbsCalsLoss / 4);
 
-    document.querySelector(".result").hidden = false;
+    result.hidden = false;
     document.querySelector(".dropdown").hidden = false;
     formSubmit.hidden = true;
     nameMessage.innerHTML = nameInput;
@@ -117,11 +117,18 @@ formSubmit.addEventListener("click", () => {
     proteinLoss.innerHTML = protein.toLocaleString("en-US") + " g";
     carbsLoss.innerHTML = carbsIntakeLoss.toLocaleString("en-US") + " g";
     fatsLoss.innerHTML = fat.toLocaleString("en-US") + " g";
+
+    result.scrollIntoView({
+      block: "start",
+      behavior: "smooth",
+      inline: "start",
+    });
   }
 });
 
 // FOOD DATA
-document.querySelector(".food-results").hidden = true;
+foodresults = document.querySelector(".food-results");
+foodresults.hidden = true;
 const foodcals = document.querySelector(".foodcals");
 const foodprotein = document.querySelector(".foodprotein");
 const foodfats = document.querySelector(".foodfats");
@@ -234,6 +241,11 @@ selectfood.onchange = () => {
     foodfats.innerHTML = food[6].fat + " g";
     foodcarbs.innerHTML = food[6].carbohydrates + " g";
   }
+  foodresults.scrollIntoView({
+    block: "start",
+    behavior: "smooth",
+    inline: "start",
+  });
 };
 
 const reset = () => {
