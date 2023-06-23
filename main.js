@@ -13,7 +13,7 @@ const carbsLoss = document.querySelector(".result .carbsloss");
 const fatsLoss = document.querySelector(".result .fatsloss");
 
 const nameMessage = document.querySelector(".result .nameInput");
-// document.querySelector(".result").hidden = true;
+document.querySelector(".result").hidden = true;
 // document.querySelector(".dropdown").hidden = true;
 
 // BMR formula
@@ -105,26 +105,126 @@ formSubmit.addEventListener("click", () => {
     const carbsCalsLoss = Math.round(TDEE - 500 - proteinCals - fatCals);
     const carbsIntakeLoss = Math.round(carbsCalsLoss / 4);
 
-    // document.querySelector(".result").hidden = false;
+    document.querySelector(".result").hidden = false;
     // document.querySelector(".dropdown").hidden = false;
     formSubmit.hidden = true;
     nameMessage.innerHTML = nameInput;
     BMRcalories.innerHTML = BMR.toLocaleString("en-US") + " Calories";
     TDEEcalories.innerHTML = TDEE.toLocaleString("en-US") + " Calories";
-    proteinIntake.innerHTML = protein.toLocaleString("en-US") + " grams";
-    carbsIntake.innerHTML = carbs.toLocaleString("en-US") + " grams";
-    fatsIntake.innerHTML = fat.toLocaleString("en-US") + " grams";
-    proteinLoss.innerHTML = protein.toLocaleString("en-US") + " grams";
-    carbsLoss.innerHTML = carbsIntakeLoss.toLocaleString("en-US") + " grams";
-    fatsLoss.innerHTML = fat.toLocaleString("en-US") + " grams";
+    proteinIntake.innerHTML = protein.toLocaleString("en-US") + " g";
+    carbsIntake.innerHTML = carbs.toLocaleString("en-US") + " g";
+    fatsIntake.innerHTML = fat.toLocaleString("en-US") + " g";
+    proteinLoss.innerHTML = protein.toLocaleString("en-US") + " g";
+    carbsLoss.innerHTML = carbsIntakeLoss.toLocaleString("en-US") + " g";
+    fatsLoss.innerHTML = fat.toLocaleString("en-US") + " g";
   }
 });
-
-const cravingSelect = document.querySelector(".dropdown-item");
-console.log(cravingSelect);
 
 // make array of objects with food and macro content
 // make options from array object index using foreach?
 // on change, get value of change
 // print data in object
 // give remainder for the day
+
+const foodcals = document.querySelector(".foodcals");
+const foodprotein = document.querySelector(".foodprotein");
+const foodfats = document.querySelector(".foodfats");
+const foodcarbs = document.querySelector(".foodcarbs");
+
+const selectfood = document.querySelector(".foodselect .form-control");
+const fooditem = document.querySelector(".fooditem");
+
+const food = [
+  {
+    food: "bak kut teh",
+    calories: 324,
+    protein: 28.11,
+    fat: 23.43,
+    carbohydrates: 0,
+  },
+  {
+    food: "briyani",
+    calories: 752,
+    protein: 35.85,
+    fat: 24.75,
+    carbohydrates: 96.46,
+  },
+  {
+    food: "breakfast set A",
+    calories: 109,
+    protein: 1.91,
+    fat: 4.67,
+    carbohydrates: 14.79,
+  },
+  {
+    food: "char kway teow",
+    calories: 745,
+    protein: 22.66,
+    fat: 38.4,
+    carbohydrates: 76.03,
+  },
+  {
+    food: "nasi lemak (with chicken wing)",
+    calories: 884,
+    protein: 35.11,
+    fat: 33.58,
+    carbohydrates: 109.34,
+  },
+  {
+    food: "roasted chicken rice",
+    calories: 525,
+    protein: 21.78,
+    fat: 19.75,
+    carbohydrates: 64.47,
+  },
+  {
+    food: "steamed chicken rice",
+    calories: 556,
+    protein: 28.05,
+    fat: 13.86,
+    carbohydrates: 80.19,
+  },
+];
+
+selectfood.onchange = () => {
+  console.log(selectfood.value);
+  fooditem.innerHTML = selectfood.value;
+  if (selectfood.value === "bak kut teh") {
+    foodcals.innerHTML = food[0].calories + " kcal";
+    foodprotein.innerHTML = food[0].protein + " g";
+    foodfats.innerHTML = food[0].fat + " g";
+    foodcarbs.innerHTML = food[0].carbohydrates + " g";
+  } else if (selectfood.value === "briyani") {
+    foodcals.innerHTML = food[1].calories + " kcal";
+    foodprotein.innerHTML = food[1].protein + " g";
+    foodfats.innerHTML = food[1].fat + " g";
+    foodcarbs.innerHTML = food[1].carbohydrates + " g";
+  } else if (
+    selectfood.value === "breakfast set A (kaya toast, soft boiled eggs)"
+  ) {
+    foodcals.innerHTML = food[2].calories + " kcal";
+    foodprotein.innerHTML = food[2].protein + " g";
+    foodfats.innerHTML = food[2].fat + " g";
+    foodcarbs.innerHTML = food[2].carbohydrates + " g";
+  } else if (selectfood.value === "char kway teow") {
+    foodcals.innerHTML = food[3].calories + " kcal";
+    foodprotein.innerHTML = food[3].protein + " g";
+    foodfats.innerHTML = food[3].fat + " g";
+    foodcarbs.innerHTML = food[3].carbohydrates + " g";
+  } else if (selectfood.value === "nasi lemak (with chicken wing)") {
+    foodcals.innerHTML = food[4].calories + " kcal";
+    foodprotein.innerHTML = food[4].protein + " g";
+    foodfats.innerHTML = food[4].fat + " g";
+    foodcarbs.innerHTML = food[4].carbohydrates + " g";
+  } else if (selectfood.value === "roasted chicken rice") {
+    foodcals.innerHTML = food[5].calories + " kcal";
+    foodprotein.innerHTML = food[5].protein + " g";
+    foodfats.innerHTML = food[5].fat + " g";
+    foodcarbs.innerHTML = food[5].carbohydrates + " g";
+  } else if (selectfood.value === "steamed chicken rice") {
+    foodcals.innerHTML = food[6].calories + " kcal";
+    foodprotein.innerHTML = food[6].protein + " g";
+    foodfats.innerHTML = food[6].fat + " g";
+    foodcarbs.innerHTML = food[6].carbohydrates + " g";
+  }
+};

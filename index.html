@@ -144,9 +144,9 @@
      <div class="text-center">
 
      <button type ="button" class="btn btn-outline-dark m-2" value="submit">Calculate!</button>
-</div>
+</div>     <div class="result">
+
 <div class ="container p-3 mt-4 mb-4">
-     <div class="result">
      <div class="text-center">
       <div class="name">Hey <span class="nameInput"></span>, here are your results!</div>
       <div class="text-uppercase mt-2"><u>Basal Metabolic Rate</u> <p><span class ="bmrcalories"></span></p></div>
@@ -175,26 +175,43 @@
 
     </div>
     <div class="text-center">
-      <!-- <legend class="col-form-label col-sm-2 pt-0">
- <div class="col-sm-2"> -->
-
+<div class ="dropdown">
   <div class="row mx-auto">
     <div class="col-md-7">Have any cravings for local food? <br>Pick a food, and we'll tell you what you'll be left with for the day.</br></div>
     <div class="col-md-4 m-2">
+      <div class="foodselect">
 <select class="form-control">
-          <option value ="null">Select food!</option> 
-          <option value ="bakkutteh">Bak kut teh</option>  
-          <option value ="briyani">Briyani (mutton)</option>   
-          <option value ="steamedchickenrice">Breakfast Set A (kaya toast, soft boiled eggs)</option>    
-          <option value ="charkwayteow">Char kway teow</option>     
-          <option value ="friedcarrotcake">Fried carrot cake</option>    
-          <option value ="nasilemak">Nasi lemak</option>
-          <option value ="roastedchickenrice">Roasted chicken rice</option>
-          <option value ="steamedchickenrice">Steamed chicken rice</option>     
+          <option value ="0">Select food!</option> 
+          <option  value ="bak kut teh">Bak kut teh</option>  
+          <option  value ="briyani">Briyani (mutton)</option>   
+          <option value ="breakfast set A (kaya toast, soft boiled eggs)">Breakfast set A (kaya toast, soft boiled eggs)</option>    
+          <option value ="char kway teow">Char kway teow</option>     
+          <option value ="nasi lemak (with chicken wing)">Nasi lemak (with chicken wing)</option>
+          <option  value ="roasted chicken rice">Roasted chicken rice</option>
+          <option  value ="steamed chicken rice">Steamed chicken rice</option>     
         </div>
         </div></div>
     </select>
-  </div>
+  </div></div>
+</div>
+
+  <div class ="container p-3 mt-4 mb-4">
+    <div class="result">
+    <div class="text-center">
+     <div class="food">You have selected <span class="fooditem"></span>.</div>
+     <div class ="food-results">
+<div class="row">
+  <p><div class="text-center fw-bold">Calories: <span class="foodcals"></span></div></div>
+  <div class="row">
+    <div class="text-center fw-bold">Protein: <span class="foodprotein"></span></div></div>
+    <div class="row">
+      <div class="text-center fw-bold">Fats: <span class="foodfats"></span></div></div>
+      <div class="row">
+        <div class="text-center fw-bold">Carbohydrates: <span class="foodcarbs"></span></div></div></p>
+
+</div></div></div></div>
+     </div>
+
 
   </body>
 

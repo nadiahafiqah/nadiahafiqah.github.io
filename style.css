@@ -60,5 +60,19 @@ h6 {
 .result .fatsloss {
   color: rgb(61, 99, 51);
 }
-.form-control {
+.food .fooditem {
+  font-weight: bold;
+  color: rgb(251, 84, 212);
+}
+.food-results .foodcals {
+  color: red;
+}
+.food-results .foodprotein {
+  color: rgb(73, 22, 241);
+}
+.food-results .foodfats {
+  color: rgb(61, 99, 51);
+}
+.food-results .foodcarbs {
+  color: rgb(241, 113, 22);
 }

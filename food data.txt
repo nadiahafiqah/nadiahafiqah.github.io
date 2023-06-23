@@ -1,0 +1,41 @@
+Chicken rice, with roasted chicken
+Energy (kcal)	524.72 kcal
+Protein (g)	21.78 g
+Total fat (g)	19.75 g
+Carbohydrate (g)	64.47 g
+
+Chicken rice, with steamed chicken
+Energy (kcal)	557.7 kcal
+Protein (g)	28.05 g
+Total fat (g)	13.86 g
+Carbohydrate (g)	80.19 g
+
+Bak kut teh
+Energy (kcal)	323.71 kcal
+Protein (g)	28.11 g
+Total fat (g)	23.43 g
+Carbohydrate (g)	NA
+
+Mutton briyani
+Energy (kcal)	751.95 kcal
+Protein (g)	35.85 g
+Total fat (g)	24.75 g
+Carbohydrate (g)	96.46 g
+
+Kaya Toast with Butter (12g protein for 2 soft boiled eggs)
+Energy (kcal)	108.75 kcal
+Protein (g)	1.91 g
+Total fat (g)	4.67 g
+Carbohydrate (g)	14.79 g
+
+Char kway teow
+Energy (kcal)	744.96 kcal
+Protein (g)	22.66 g
+Total fat (g)	38.4 g
+Carbohydrate (g)	76.03 g
+
+Nasi Lemak with chicken wing
+Energy (kcal)	884.03 kcal
+Protein (g)	35.11 g
+Total fat (g)	33.58 g
+Carbohydrate (g)	109.34 g
