@@ -14,7 +14,7 @@ const fatsLoss = document.querySelector(".result .fatsloss");
 
 const nameMessage = document.querySelector(".result .nameInput");
 document.querySelector(".result").hidden = true;
-// document.querySelector(".dropdown").hidden = true;
+document.querySelector(".dropdown").hidden = true;
 
 // BMR formula
 const bmr = (weight, height, age, sex) => {
@@ -106,7 +106,7 @@ formSubmit.addEventListener("click", () => {
     const carbsIntakeLoss = Math.round(carbsCalsLoss / 4);
 
     document.querySelector(".result").hidden = false;
-    // document.querySelector(".dropdown").hidden = false;
+    document.querySelector(".dropdown").hidden = false;
     formSubmit.hidden = true;
     nameMessage.innerHTML = nameInput;
     BMRcalories.innerHTML = BMR.toLocaleString("en-US") + " Calories";
@@ -120,17 +120,12 @@ formSubmit.addEventListener("click", () => {
   }
 });
 
-// make array of objects with food and macro content
-// make options from array object index using foreach?
-// on change, get value of change
-// print data in object
-// give remainder for the day
-
+// FOOD DATA
+document.querySelector(".food-results").hidden = true;
 const foodcals = document.querySelector(".foodcals");
 const foodprotein = document.querySelector(".foodprotein");
 const foodfats = document.querySelector(".foodfats");
 const foodcarbs = document.querySelector(".foodcarbs");
-
 const selectfood = document.querySelector(".foodselect .form-control");
 const fooditem = document.querySelector(".fooditem");
 
@@ -186,15 +181,21 @@ const food = [
   },
 ];
 
+// When dropdown is selected, data of food is presented
 selectfood.onchange = () => {
   console.log(selectfood.value);
   fooditem.innerHTML = selectfood.value;
+  document.querySelector(".reset1").hidden = true;
   if (selectfood.value === "bak kut teh") {
+    document.querySelector(".food-results").hidden = false;
+
     foodcals.innerHTML = food[0].calories + " kcal";
     foodprotein.innerHTML = food[0].protein + " g";
     foodfats.innerHTML = food[0].fat + " g";
     foodcarbs.innerHTML = food[0].carbohydrates + " g";
   } else if (selectfood.value === "briyani") {
+    document.querySelector(".food-results").hidden = false;
+
     foodcals.innerHTML = food[1].calories + " kcal";
     foodprotein.innerHTML = food[1].protein + " g";
     foodfats.innerHTML = food[1].fat + " g";
@@ -202,29 +203,61 @@ selectfood.onchange = () => {
   } else if (
     selectfood.value === "breakfast set A (kaya toast, soft boiled eggs)"
   ) {
+    document.querySelector(".food-results").hidden = false;
+
     foodcals.innerHTML = food[2].calories + " kcal";
     foodprotein.innerHTML = food[2].protein + " g";
     foodfats.innerHTML = food[2].fat + " g";
     foodcarbs.innerHTML = food[2].carbohydrates + " g";
   } else if (selectfood.value === "char kway teow") {
+    document.querySelector(".food-results").hidden = false;
     foodcals.innerHTML = food[3].calories + " kcal";
     foodprotein.innerHTML = food[3].protein + " g";
     foodfats.innerHTML = food[3].fat + " g";
     foodcarbs.innerHTML = food[3].carbohydrates + " g";
   } else if (selectfood.value === "nasi lemak (with chicken wing)") {
+    document.querySelector(".food-results").hidden = false;
     foodcals.innerHTML = food[4].calories + " kcal";
     foodprotein.innerHTML = food[4].protein + " g";
     foodfats.innerHTML = food[4].fat + " g";
     foodcarbs.innerHTML = food[4].carbohydrates + " g";
   } else if (selectfood.value === "roasted chicken rice") {
+    document.querySelector(".food-results").hidden = false;
     foodcals.innerHTML = food[5].calories + " kcal";
     foodprotein.innerHTML = food[5].protein + " g";
     foodfats.innerHTML = food[5].fat + " g";
     foodcarbs.innerHTML = food[5].carbohydrates + " g";
   } else if (selectfood.value === "steamed chicken rice") {
+    document.querySelector(".food-results").hidden = false;
     foodcals.innerHTML = food[6].calories + " kcal";
     foodprotein.innerHTML = food[6].protein + " g";
     foodfats.innerHTML = food[6].fat + " g";
     foodcarbs.innerHTML = food[6].carbohydrates + " g";
   }
 };
+
+const reset = () => {
+  location.reload(true);
+  return false;
+};
+
+const button1 = document.querySelector(".reset1");
+button1.addEventListener("click", reset);
+const button2 = document.querySelector(".reset2");
+button2.addEventListener("click", reset);
+
+// Calculating remaining cals/macronutrients left if maintenance
+// const calsleft = document.querySelector(".calsleft");
+// const proteinleft = document.querySelector(".proteinleft");
+// const fatsleft = document.querySelector(".fatsleft");
+// const carbsleft = document.querySelector(".carbsleft");
+
+// calsleft.innerHTML = TDEEcalories - food[6].calories + " kcal";
+
+// TDEEcalories.innerHTML = TDEE.toLocaleString("en-US") + " Calories";
+//     proteinIntake.innerHTML = protein.toLocaleString("en-US") + " g";
+//     carbsIntake.innerHTML = carbs.toLocaleString("en-US") + " g";
+//     fatsIntake.innerHTML = fat.toLocaleString("en-US") + " g";
+//     proteinLoss.innerHTML = protein.toLocaleString("en-US") + " g";
+//     carbsLoss.innerHTML = carbsIntakeLoss.toLocaleString("en-US") + " g";
+//     fatsLoss.
