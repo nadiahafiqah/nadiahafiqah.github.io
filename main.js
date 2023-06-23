@@ -194,15 +194,13 @@ selectfood.onchange = () => {
   fooditem.innerHTML = selectfood.value;
   document.querySelector(".reset1").hidden = true;
   if (selectfood.value === "bak kut teh") {
-    document.querySelector(".food-results").hidden = false;
-
+    foodresults.hidden = false;
     foodcals.innerHTML = food[0].calories + " kcal";
     foodprotein.innerHTML = food[0].protein + " g";
     foodfats.innerHTML = food[0].fat + " g";
     foodcarbs.innerHTML = food[0].carbohydrates + " g";
   } else if (selectfood.value === "briyani") {
-    document.querySelector(".food-results").hidden = false;
-
+    foodresults.hidden = false;
     foodcals.innerHTML = food[1].calories + " kcal";
     foodprotein.innerHTML = food[1].protein + " g";
     foodfats.innerHTML = food[1].fat + " g";
@@ -210,32 +208,31 @@ selectfood.onchange = () => {
   } else if (
     selectfood.value === "breakfast set A (kaya toast, soft boiled eggs)"
   ) {
-    document.querySelector(".food-results").hidden = false;
-
+    foodresults.hidden = false;
     foodcals.innerHTML = food[2].calories + " kcal";
     foodprotein.innerHTML = food[2].protein + " g";
     foodfats.innerHTML = food[2].fat + " g";
     foodcarbs.innerHTML = food[2].carbohydrates + " g";
   } else if (selectfood.value === "char kway teow") {
-    document.querySelector(".food-results").hidden = false;
+    foodresults.hidden = false;
     foodcals.innerHTML = food[3].calories + " kcal";
     foodprotein.innerHTML = food[3].protein + " g";
     foodfats.innerHTML = food[3].fat + " g";
     foodcarbs.innerHTML = food[3].carbohydrates + " g";
   } else if (selectfood.value === "nasi lemak (with chicken wing)") {
-    document.querySelector(".food-results").hidden = false;
+    foodresults.hidden = false;
     foodcals.innerHTML = food[4].calories + " kcal";
     foodprotein.innerHTML = food[4].protein + " g";
     foodfats.innerHTML = food[4].fat + " g";
     foodcarbs.innerHTML = food[4].carbohydrates + " g";
   } else if (selectfood.value === "roasted chicken rice") {
-    document.querySelector(".food-results").hidden = false;
+    foodresults.hidden = false;
     foodcals.innerHTML = food[5].calories + " kcal";
     foodprotein.innerHTML = food[5].protein + " g";
     foodfats.innerHTML = food[5].fat + " g";
     foodcarbs.innerHTML = food[5].carbohydrates + " g";
   } else if (selectfood.value === "steamed chicken rice") {
-    document.querySelector(".food-results").hidden = false;
+    foodresults.hidden = false;
     foodcals.innerHTML = food[6].calories + " kcal";
     foodprotein.innerHTML = food[6].protein + " g";
     foodfats.innerHTML = food[6].fat + " g";
