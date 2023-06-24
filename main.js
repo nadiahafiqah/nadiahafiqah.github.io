@@ -154,7 +154,7 @@ const food = [
   {
     food: "breakfast set A",
     calories: 109,
-    protein: 1.91,
+    protein: 13.91,
     fat: 4.67,
     carbohydrates: 14.79,
   },
