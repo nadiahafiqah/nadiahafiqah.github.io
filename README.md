@@ -1,10 +1,8 @@
-# Calorie Counter
-
-(with a local twist)
+# Calorie Counter (with a local twist)
 
 ## What is this?
 
-This calorie counter is made with HTML, CSS, and Javascript. If you'd like to lose weight, but still want to enjoy your cheat meals, this is the calculator for you.
+This calorie counter is made with HTML, CSS, Bootstrap, and Javascript. If you'd like to lose weight, but still want to enjoy your cheat meals, this is the calculator for you.
 
 This is the first project in a series of projects completed in my journey in General Assembly's Software Engineering Immersive Course.
 
